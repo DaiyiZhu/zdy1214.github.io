@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Codeforces Round 627 (Div. 3) | zdy&#39;s blog</title>
+  <title>Codeforces Round 639 (Div. 2) | zdy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="E. Sleeping ScheduleDescription:Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from">
+  <meta name="description" content="C. Hilbert’s HotelDescription: Hilbert’s Hotel is a very unusual hotel since the number of rooms       is infinite! In fact, there is exactly one room for every integer,         including zero and neg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round 627 (Div. 3)">
-<meta property="og:url" content="http://yoursite.com/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/index.html">
+<meta property="og:title" content="Codeforces Round 639 (Div. 2)">
+<meta property="og:url" content="http://yoursite.com/2020/05/07/Codeforces%20Round%20639%20(Div.%202)/index.html">
 <meta property="og:site_name" content="zdy&#39;s blog">
-<meta property="og:description" content="E. Sleeping ScheduleDescription:Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from">
+<meta property="og:description" content="C. Hilbert’s HotelDescription: Hilbert’s Hotel is a very unusual hotel since the number of rooms       is infinite! In fact, there is exactly one room for every integer,         including zero and neg">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-07T02:13:18.429Z">
-<meta property="article:modified_time" content="2020-03-15T17:01:44.000Z">
+<meta property="article:published_time" content="2020-05-07T03:48:42.793Z">
+<meta property="article:modified_time" content="2020-05-07T07:55:21.831Z">
 <meta property="article:author" content="thunder_dz">
-<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="zdy&#39;s blog" type="application/atom+xml">
@@ -147,35 +146,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Codeforces Round 627 (Div. 3)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Codeforces Round 639 (Div. 2)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Codeforces Round 627 (Div. 3)
+      Codeforces Round 639 (Div. 2)
     </h1>
   
 
         
-        <a href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+        <a href="/2020/05/07/Codeforces%20Round%20639%20(Div.%202)/" class="archive-article-date">
+  	<time datetime="2020-05-07T03:48:42.793Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="E-Sleeping-Schedule"><a href="#E-Sleeping-Schedule" class="headerlink" title="E. Sleeping Schedule"></a>E. Sleeping Schedule</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is $0$). Each time Vova sleeps exactly one day (in other words, $h$ hours).</p>
-<a id="more"></a>
-<p>Vova thinks that the $i$-th sleeping time is good if he starts to sleep between hours $l$ and $r$ inclusive.<br>Vova can control himself and before the $i$-th time can choose between two options: go to sleep after $a_i$ hours or after $a_i - 1$ hours.<br>Your task is to say the maximum number of good sleeping times Vova can obtain if he acts optimally.</p>
-<h2 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h2><p>The first line of the input contains four integers $n, h, l$ and $r$ ($1 \le n \le 2000, 3 \le h \le 2000, 0 \le l \le r &lt; h$) — the number of times Vova goes to sleep, the number of hours in a day and the segment of the good sleeping time.<br>The second line of the input contains $n$ integers $a_1, a_2, \dots, a_n$ ($1 \le a_i &lt; h$), where $a_i$ is the number of hours after which Vova goes to sleep the $i$-th time.</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Print one integer — the maximum number of good sleeping times Vova can obtain if he acts optimally.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>7 24 21 23<br>16 17 14 20 20 11 22</p>
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>3</p>
-<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a href="https://codeforces.com/contest/1324/problem/E" target="_blank" rel="noopener">题目链接</a></h3><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>动态规划,用dp[i][j]表示第i次睡觉时,现在时间为j时我们good sleep times的最大次数,然后我们可以得到状态转移方程dp[i][j]=max(dp[i-1][(j-a[i]+h)%h],dp[i-1][(j-a[i]+1+h)%h])+(j&gt;=l&amp;&amp;j&lt;=r),表示目前的dp[i][j]是由第i-1次睡觉,时间为(j-a[i]+h)%h和(j-(a[i]-1)+h)%h转移过来的,这时候我们只要设置好处置条件dp[0][0]=0就可以求得结果.</p>
-<h3 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2010</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> dp[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,h,l,r;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d %d"</span>,&amp;n,&amp;h,&amp;l,&amp;r);</span><br><span class="line">    <span class="built_in">memset</span>(dp,-INF,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//vector&lt;int&gt; a(n+1);</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;h;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i][j]=<span class="built_in">max</span>(dp[i<span class="number">-1</span>][(j-a[i]+h)%h],dp[i<span class="number">-1</span>][(j-a[i]+<span class="number">1</span>+h)%h])+(j&gt;=l&amp;&amp;j&lt;=r);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;h;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ans=<span class="built_in">max</span>(ans,dp[n][i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    <span class="comment">//cout &lt;&lt; "Hello world!" &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="C-Hilbert’s-Hotel"><a href="#C-Hilbert’s-Hotel" class="headerlink" title="C. Hilbert’s Hotel"></a>C. Hilbert’s Hotel</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> Hilbert’s Hotel is a very unusual hotel since the number of rooms       is infinite! In fact, there is exactly one room for every integer,         including zero and negative       integers. Even stranger, the hotel is currently at full       capacity, meaning there is exactly one guest in every room. The       hotel’s manager, David Hilbert himself, decides he wants to       shuffle the guests around because he thinks this will create a       vacancy (a room without a guest).<br> <a id="more"></a><br>     For any integer $k$ and positive integer $n$, let       $k\bmod n$ denote the remainder when $k$ is divided by       $n$. More formally, $r=k\bmod n$ is the smallest       non-negative integer such that $k-r$ is divisible by $n$.       It always holds that $0\le k\bmod n\le n-1$. For example,       $100\bmod 12=4$ and $(-1337)\bmod 3=1$.<br>     Then the shuffling works as follows. There is an array of $n$       integers $a_0,a_1,\ldots,a_{n-1}$. Then for each integer       $k$, the guest in room $k$ is moved to room number       $k+a_{k\bmod n}$.<br>     After this shuffling process, determine if there is still exactly       one guest assigned to each room. That is, there are no vacancies       or rooms with multiple guests.</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h2><p>t Each test consists of multiple test cases. The first line       contains a single integer $t$ ($1\le t\le 10^4$) — the       number of test cases. Next $2t$ lines contain descriptions of       test cases.<br>     The first line of each test case contains a single integer       $n$ ($1\le n\le 2\cdot 10^5$) — the length of the array.<br>     The second line of each test case contains $n$ integers       $a_0,a_1,\ldots,a_{n-1}$ ($-10^9\le a_i\le 10^9$).<br>     It is guaranteed that the sum of $n$ over all test cases does       not exceed $2\cdot 10^5$.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>t For each test case, output a single line containing “YES” if there is exactly one       guest assigned to each room after the shuffling process, or         “NO” otherwise.       You can print each letter in any case (upper or lower).</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>6<br>1<br>14<br>2<br>1 -1<br>4<br>5 5 5 1<br>3<br>3 2 1<br>2<br>0 1<br>5<br>-239 -2 -100 -3 -11</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>YES<br>YES<br>YES<br>NO<br>NO<br>YES</p>
+<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a href="https://codeforces.com/contest/1345/problem/C" target="_blank" rel="noopener">题目链接</a></h3><h1 id="D-Monopole-Magnets"><a href="#D-Monopole-Magnets" class="headerlink" title="D. Monopole Magnets"></a>D. Monopole Magnets</h1><h2 id="Description-1"><a href="#Description-1" class="headerlink" title="Description:"></a>Description:</h2><p> A monopole magnet is a magnet that only has one pole, either       north or south. They don’t actually exist since real magnets have       two poles, but this is a programming contest problem, so we don’t care.<br>     There is an $n\times m$ grid. Initially, you may place some       north magnets and some south magnets into the cells. You are       allowed to place as many magnets as you like, even multiple in the       same cell.<br>     An operation is performed as follows. Choose a north magnet and a       south magnet to activate. If they are in the same row or the same       column and they occupy different cells, then the north magnet       moves one unit closer to the south magnet. Otherwise, if they       occupy the same cell or do not share a row or column, then nothing       changes. Note that the south magnets are immovable.<br>     Each cell of the grid is colored black or white. Let’s consider       ways to place magnets in the cells so that the following       conditions are met.<br>            There is at least one south magnet in every row and every         column.   If a cell is colored black, then it is possible for a north         magnet to occupy this cell after some sequence of operations           from the initial         placement.   If a cell is colored white, then it is impossible for a north         magnet to occupy this cell after some sequence of operations           from the initial         placement.  Determine if it is possible to place magnets such that these       conditions are met. If it is possible, find the minimum number of       north magnets required (there are no requirements on the number of       south magnets).</p>
+<h2 id="Input-1"><a href="#Input-1" class="headerlink" title="Input:"></a>Input:</h2><p>t The first line contains two integers $n$ and $m$ ($1\le       n,m\le 1000$)  — the number of rows and the number of columns, respectively.<br>     The next $n$ lines describe the coloring. The $i$-th of       these lines contains a string of length $m$, where the       $j$-th character denotes the color of the cell in row $i$       and column $j$. The characters “#” and “.” represent black and       white, respectively. It is guaranteed, that the string will not       contain any other characters.</p>
+<h2 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h2><p>t Output a single integer, the minimum possible number of north       magnets required.<br>     If there is no placement of magnets that satisfies all       conditions, print a single integer $-1$.</p>
+<h2 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>3 3<br>.#.<br>###<br>##.</p>
+<h2 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>1</p>
+<h2 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>4 2<br>##<br>.#<br>.#<br>##</p>
+<h2 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>-1</p>
+<h2 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>4 5<br>….#<br>####.<br>.###.<br>.#…</p>
+<h2 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>2</p>
+<h2 id="Sample-Input-4"><a href="#Sample-Input-4" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>2 1<br>.<br>#</p>
+<h2 id="Sample-Output-4"><a href="#Sample-Output-4" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>-1</p>
+<h2 id="Sample-Input-5"><a href="#Sample-Input-5" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>t<br>3 5<br>…..<br>…..<br>…..</p>
+<h2 id="Sample-Output-5"><a href="#Sample-Output-5" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>t<br>0</p>
+<h3 id="题目链接-1"><a href="#题目链接-1" class="headerlink" title="题目链接"></a><a href="https://codeforces.com/contest/1345/problem/D" target="_blank" rel="noopener">题目链接</a></h3>
       
 
       
@@ -204,17 +213,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -265,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/07/Codeforces%20Round%20639%20(Div.%202)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +277,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          博客搭建
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/07/Codeforces%20Round%20615%20(Div.%203)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Codeforces Round 615 (Div. 3)</div>
+    <a href="/2020/05/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -317,7 +306,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#E-Sleeping-Schedule"><span class="toc-number">1.</span> <span class="toc-text">E. Sleeping Schedule</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.1.</span> <span class="toc-text">Description:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">1.2.</span> <span class="toc-text">Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Output"><span class="toc-number">1.3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input"><span class="toc-number">1.4.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output"><span class="toc-number">1.5.</span> <span class="toc-text">Sample Output:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接"><span class="toc-number">1.5.1.</span> <span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题解"><span class="toc-number">1.5.2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AC代码"><span class="toc-number">1.5.3.</span> <span class="toc-text">AC代码</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Hilbert’s-Hotel"><span class="toc-number">1.</span> <span class="toc-text">C. Hilbert’s Hotel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.1.</span> <span class="toc-text">Description:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">1.2.</span> <span class="toc-text">Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Output"><span class="toc-number">1.3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input"><span class="toc-number">1.4.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output"><span class="toc-number">1.5.</span> <span class="toc-text">Sample Output:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接"><span class="toc-number">1.5.1.</span> <span class="toc-text">题目链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D-Monopole-Magnets"><span class="toc-number">2.</span> <span class="toc-text">D. Monopole Magnets</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description-1"><span class="toc-number">2.1.</span> <span class="toc-text">Description:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input-1"><span class="toc-number">2.2.</span> <span class="toc-text">Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Output-1"><span class="toc-number">2.3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-1"><span class="toc-number">2.4.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-1"><span class="toc-number">2.5.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-2"><span class="toc-number">2.6.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-2"><span class="toc-number">2.7.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-3"><span class="toc-number">2.8.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-3"><span class="toc-number">2.9.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-4"><span class="toc-number">2.10.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-4"><span class="toc-number">2.11.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-5"><span class="toc-number">2.12.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-5"><span class="toc-number">2.13.</span> <span class="toc-text">Sample Output:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接-1"><span class="toc-number">2.13.1.</span> <span class="toc-text">题目链接</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -333,7 +322,7 @@
   
 
   
-  <div id="SOHUCS" sid="Codeforces Round 627 (Div. 3)" ></div> 
+  <div id="SOHUCS" sid="Codeforces Round 639 (Div. 2)" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
