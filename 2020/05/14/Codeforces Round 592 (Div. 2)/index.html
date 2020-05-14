@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 技巧 | zdy&#39;s blog</title>
+  <title>Codeforces Round 592 (Div. 2) | zdy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zdy&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/%E6%8A%80%E5%B7%A7/index.html">
+  <meta name="description" content="C. The Football SeasonDescription: The football season has just ended in Berland. According to the       rules of Berland football, each match is played between two teams.       The result of each mat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round 592 (Div. 2)">
+<meta property="og:url" content="http://yoursite.com/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/index.html">
 <meta property="og:site_name" content="zdy&#39;s blog">
+<meta property="og:description" content="C. The Football SeasonDescription: The football season has just ended in Berland. According to the       rules of Berland football, each match is played between two teams.       The result of each mat">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-14T03:41:12.807Z">
+<meta property="article:modified_time" content="2020-05-14T03:40:30.734Z">
 <meta property="article:author" content="thunder_dz">
 <meta name="twitter:card" content="summary">
   
@@ -142,68 +146,199 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Codeforces Round 592 (Div. 2)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/07/Codeforces%20Round%20631%20(Div.%202)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/07/Codeforces%20Round%20631%20(Div.%202)/">Codeforces Round 631 (Div. 2)</a>
+    <h1 class="article-title" itemprop="name">
+      Codeforces Round 592 (Div. 2)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">构造</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/" class="archive-article-date">
+  	<time datetime="2020-05-14T03:41:12.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C-The-Football-Season"><a href="#C-The-Football-Season" class="headerlink" title="C. The Football Season"></a>C. The Football Season</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> The football season has just ended in Berland. According to the       rules of Berland football, each match is played between two teams.       The result of each match is either a draw, or a victory of one of       the playing teams. If a team wins the match, it gets $w$       points, and the opposing team gets $0$ points. If the game       results in a draw, both teams get $d$ points.<br>     The manager of the Berland capital team wants to summarize the       results of the season, but, unfortunately, all information about       the results of each match is lost. The manager only knows that the       team has played $n$ games and got $p$ points for them.<br>     You have to determine three integers $x$, $y$ and $z$       — the number of wins, draws and loses of the team. If there are       multiple answers, print any of them. If there is no suitable       triple $(x, y, z)$, report about it.</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h2><p>The first line contains four integers $n$, $p$, $w$       and $d$ $(1 \le n \le 10^{12}, 0 \le p \le 10^{17}, 1 \le d       &lt; w \le 10^{5})$ — the number of games, the number of points       the team got, the number of points awarded for winning a match,       and the number of points awarded for a draw, respectively. Note       that $w &gt; d$, so the number of points awarded for winning       is strictly greater than the number of points awarded for draw.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>If there is no answer, print $-1$.<br>     Otherwise print three non-negative integers $x$, $y$ and       $z$ — the number of wins, draws and losses of the team. If       there are multiple possible triples $(x, y, z)$, print any of       them. The numbers should meet the following conditions:<br>       $x \cdot w + y \cdot d = p$,   $x + y + z = n$. </p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>30 60 3 1</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>17 9 4</p>
+<h2 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>10 51 5 4</p>
+<h2 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>-1</p>
+<h2 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>20 0 15 5</p>
+<h2 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>0 0 20</p>
+<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a href="https://codeforces.com/contest/1244/problem/C" target="_blank" rel="noopener">题目链接</a></h3><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>观察可知,$w$大于$d$,所以$d$个$w$和$w$个$d$产生的价值等价,为了尽量减少赢个平局的次数以不至于让输的次数小于0,我们需要尽可能地增加赢的次数，所以在$0-(w-1)$枚举$y$,然后计算$n-y<em>d$是否大于等于$0$，$(n-y</em>d)/w$是否为整数，$x+y+z$是否小于$n$。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DBG(x)                         \</span></span><br><span class="line">    (<span class="keyword">void</span>)(<span class="built_in">cout</span> &lt;&lt; <span class="string">"L"</span> &lt;&lt; __LINE__     \</span><br><span class="line">                &lt;&lt; <span class="string">": "</span> &lt;&lt; #x &lt;&lt; <span class="string">" = "</span> \</span><br><span class="line">                &lt;&lt; (x) &lt;&lt; <span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">110000</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(<span class="number">12</span>);</span><br><span class="line">    ll n, p, w, d;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; p &gt;&gt; w &gt;&gt; d;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    ll cur1, cur2;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; w; y++)</span><br><span class="line">    &#123;</span><br><span class="line">        ll cur = p - y * d;</span><br><span class="line">        <span class="keyword">if</span> (cur &gt;= <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur % w == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                cur1 = cur / w;</span><br><span class="line">                cur2 = y;</span><br><span class="line">                <span class="keyword">if</span> (cur1 + cur2 &lt;= n)</span><br><span class="line">                &#123;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!flag)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; cur1 &lt;&lt; <span class="string">" "</span> &lt;&lt; cur2 &lt;&lt; <span class="string">" "</span> &lt;&lt; n - cur1 - cur2 &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="E-Minimizing-Difference"><a href="#E-Minimizing-Difference" class="headerlink" title="E. Minimizing Difference"></a>E. Minimizing Difference</h1><h2 id="Description-1"><a href="#Description-1" class="headerlink" title="Description:"></a>Description:</h2><p> You are given a sequence $a_1, a_2, \dots, a_n$ consisting of       $n$ integers.<br>     You may perform the following operation on this sequence: choose       any element and either increase or decrease it by one.<br>     Calculate the minimum possible difference between the maximum       element and the minimum element in the sequence, if you can       perform the aforementioned operation no more than $k$ times.</p>
+<h2 id="Input-1"><a href="#Input-1" class="headerlink" title="Input:"></a>Input:</h2><p>The first line contains two integers $n$ and $k$ $(2       \le n \le 10^{5}, 1 \le k \le 10^{14})$ — the number of elements       in the sequence and the maximum number of times you can perform       the operation, respectively.<br>     The second line contains a sequence of integers $a_1, a_2,       \dots, a_n$ $(1 \le a_i \le 10^{9})$.</p>
+<h2 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h2><p>Print the minimum possible difference between the maximum element       and the minimum element in the sequence, if you can perform the       aforementioned operation no more       than $k$ times.</p>
+<h2 id="Sample-Input-3"><a href="#Sample-Input-3" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>4 5<br>3 1 7 5</p>
+<h2 id="Sample-Output-3"><a href="#Sample-Output-3" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>2</p>
+<h2 id="Sample-Input-4"><a href="#Sample-Input-4" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>3 10<br>100 100 100</p>
+<h2 id="Sample-Output-4"><a href="#Sample-Output-4" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>0</p>
+<h2 id="Sample-Input-5"><a href="#Sample-Input-5" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>10 9<br>4 5 5 7 5 4 5 2 4 3</p>
+<h2 id="Sample-Output-5"><a href="#Sample-Output-5" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>1</p>
+<h3 id="题目链接-1"><a href="#题目链接-1" class="headerlink" title="题目链接"></a><a href="https://codeforces.com/contest/1244/problem/E" target="_blank" rel="noopener">题目链接</a></h3><h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>本题题目的关键在于，能尽可能的减少数组中最小值和最大值的差，所以先排个序，所以使用双指针一个在数组前面，一个在数组后面进行扫就行了，使用差分数组维护相邻元素的差值，然后使用双指针，不过记住$l$和$r$如果相等时，b[l]如果大于0，还要继续操作。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DBG(x)                         \</span></span><br><span class="line">    (<span class="keyword">void</span>)(<span class="built_in">cout</span> &lt;&lt; <span class="string">"L"</span> &lt;&lt; __LINE__     \</span><br><span class="line">                &lt;&lt; <span class="string">": "</span> &lt;&lt; #x &lt;&lt; <span class="string">" = "</span> \</span><br><span class="line">                &lt;&lt; (x) &lt;&lt; <span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">110000</span>;</span><br><span class="line">ll a[maxn];</span><br><span class="line">ll b[maxn];</span><br><span class="line">ll n, k;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(ll mid)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// ios::sync_with_stdio(false);</span></span><br><span class="line">    <span class="comment">// cin.tie(0);</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(12);</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    sort(a + <span class="number">1</span>, a + <span class="number">1</span> + n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>, j = <span class="number">1</span>; i &lt;= n; j++, i++)</span><br><span class="line">    &#123;</span><br><span class="line">        b[j] = a[i] - a[i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    ll l = <span class="number">1</span>, r = n - <span class="number">1</span>;</span><br><span class="line">    ll t = <span class="number">0</span>;</span><br><span class="line">    ll p = <span class="number">1</span>;</span><br><span class="line">    ll ans = a[n] - a[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        t = <span class="built_in">min</span>(k, (b[l] + b[r]) * p);</span><br><span class="line">        k -= t;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        ans -= t / p;</span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//printf("t=%lld,k=%lld,ans=%lld,l=%lld,r=%lld\n", t, k, ans, l, r);</span></span><br><span class="line">        p++;</span><br><span class="line">        l++, r--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        t = <span class="built_in">min</span>(k, b[l] * p);</span><br><span class="line">        ans -= t / p;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
 
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/05/07/Codeforces%20Round%20639%20(Div.%202)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Codeforces Round 639 (Div. 2)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-The-Football-Season"><span class="toc-number">1.</span> <span class="toc-text">C. The Football Season</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.1.</span> <span class="toc-text">Description:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">1.2.</span> <span class="toc-text">Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Output"><span class="toc-number">1.3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input"><span class="toc-number">1.4.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output"><span class="toc-number">1.5.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-1"><span class="toc-number">1.6.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-1"><span class="toc-number">1.7.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-2"><span class="toc-number">1.8.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-2"><span class="toc-number">1.9.</span> <span class="toc-text">Sample Output:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接"><span class="toc-number">1.9.1.</span> <span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题解"><span class="toc-number">1.9.2.</span> <span class="toc-text">题解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#E-Minimizing-Difference"><span class="toc-number">2.</span> <span class="toc-text">E. Minimizing Difference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description-1"><span class="toc-number">2.1.</span> <span class="toc-text">Description:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input-1"><span class="toc-number">2.2.</span> <span class="toc-text">Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Output-1"><span class="toc-number">2.3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-3"><span class="toc-number">2.4.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-3"><span class="toc-number">2.5.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-4"><span class="toc-number">2.6.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-4"><span class="toc-number">2.7.</span> <span class="toc-text">Sample Output:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Input-5"><span class="toc-number">2.8.</span> <span class="toc-text">Sample Input:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sample-Output-5"><span class="toc-number">2.9.</span> <span class="toc-text">Sample Output:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目链接-1"><span class="toc-number">2.9.1.</span> <span class="toc-text">题目链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题解-1"><span class="toc-number">2.9.2.</span> <span class="toc-text">题解</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Codeforces Round 592 (Div. 2)" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +361,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
