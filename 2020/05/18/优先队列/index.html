@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>zdy&#39;s blog</title>
+  <title>优先队列 | zdy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zdy&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优先队列">
+<meta property="og:url" content="http://yoursite.com/2020/05/18/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/index.html">
 <meta property="og:site_name" content="zdy&#39;s blog">
+<meta property="og:description" content="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-18T13:07:23.246Z">
+<meta property="article:modified_time" content="2020-05-18T13:07:12.930Z">
 <meta property="article:author" content="thunder_dz">
 <meta name="twitter:card" content="summary">
   
@@ -142,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-优先队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-优先队列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">优先队列</a>
+    <h1 class="article-title" itemprop="name">
+      优先队列
     </h1>
   
 
@@ -164,10 +166,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。"><a href="#优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。" class="headerlink" title="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。"></a>优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。</h3>
-        
+        <h3 id="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。"><a href="#优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。" class="headerlink" title="优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。"></a>优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。</h3><a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DBG(x)                         \</span></span><br><span class="line">    (<span class="keyword">void</span>)(<span class="built_in">cout</span> &lt;&lt; <span class="string">"L"</span> &lt;&lt; __LINE__     \</span><br><span class="line">                &lt;&lt; <span class="string">": "</span> &lt;&lt; #x &lt;&lt; <span class="string">" = "</span> \</span><br><span class="line">                &lt;&lt; (x) &lt;&lt; <span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">110000</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l;</span><br><span class="line">    <span class="keyword">int</span> r;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;a, <span class="keyword">const</span> node &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.l == b.l)</span><br><span class="line">        <span class="keyword">return</span> a.r &gt; b.r;</span><br><span class="line">    <span class="keyword">return</span> a.l &gt; b.l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(<span class="number">12</span>);</span><br><span class="line">    priority_queue&lt;node&gt; q;</span><br><span class="line">    q.push(&#123;<span class="number">2</span>, <span class="number">3</span>&#125;);</span><br><span class="line">    q.push(&#123;<span class="number">1</span>, <span class="number">2</span>&#125;);</span><br><span class="line">    q.push(&#123;<span class="number">1</span>, <span class="number">3</span>&#125;);</span><br><span class="line">    q.push(&#123;<span class="number">0</span>, <span class="number">9</span>&#125;);</span><br><span class="line">    q.push(&#123;<span class="number">10</span>, <span class="number">3</span>&#125;);</span><br><span class="line">    <span class="keyword">while</span> (!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        node cur = q.top();</span><br><span class="line">        q.pop();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"l="</span> &lt;&lt; cur.l &lt;&lt; <span class="string">" "</span></span><br><span class="line">             &lt;&lt; <span class="string">"r="</span> &lt;&lt; cur.r &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="默认的情况下的优先队列是大顶堆，队头元素最大"><a href="#默认的情况下的优先队列是大顶堆，队头元素最大" class="headerlink" title="默认的情况下的优先队列是大顶堆，队头元素最大"></a>默认的情况下的优先队列是大顶堆，队头元素最大</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">int</span>&gt; q;</span><br></pre></td></tr></table></figure>
+
+<h3 id="加上重载可以为小顶堆，队头元素最小"><a href="#加上重载可以为小顶堆，队头元素最小" class="headerlink" title="加上重载可以为小顶堆，队头元素最小"></a>加上重载可以为小顶堆，队头元素最小</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt;&gt; q;</span><br></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -176,16 +202,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/18/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/18/Educational%20Codeforces%20Round%2058%20(Rated%20for%20Div.%202)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Educational Codeforces Round 58 (Rated for Div. 2)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -200,675 +285,42 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Educational Codeforces Round 58 (Rated for Div. 2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/Educational%20Codeforces%20Round%2058%20(Rated%20for%20Div.%202)/">Educational Codeforces Round 58 (Rated for Div. 2)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/18/Educational%20Codeforces%20Round%2058%20(Rated%20for%20Div.%202)/" class="archive-article-date">
-  	<time datetime="2020-05-18T12:42:42.018Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-Division-and-Union"><a href="#C-Division-and-Union" class="headerlink" title="C. Division and Union"></a>C. Division and Union</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> There are $n$ segments $[l_i, r_i]$ for $1 \le i \le       n$. You should divide all segments into two non-empty groups in such way that       there is no pair of segments from different groups which have at       least one common point, or say that it’s impossible to do it. Each       segment should belong to exactly one group.<br> To optimize testing process you will be given multitest.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/Educational%20Codeforces%20Round%2058%20(Rated%20for%20Div.%202)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。"><span class="toc-number">1.</span> <span class="toc-text">优先队列中重载中的大于在排序中是小于的意思，小于是大于的意思，所以下面这段代码中从队头开始，l从小到大，如果l相等，则按照r从小到大。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认的情况下的优先队列是大顶堆，队头元素最大"><span class="toc-number">2.</span> <span class="toc-text">默认的情况下的优先队列是大顶堆，队头元素最大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加上重载可以为小顶堆，队头元素最小"><span class="toc-number">3.</span> <span class="toc-text">加上重载可以为小顶堆，队头元素最小</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Codeforces Round 641 (Div. 2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/16/Codeforces%20Round%20641%20(Div.%202)/">Codeforces Round 641 (Div. 2)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/16/Codeforces%20Round%20641%20(Div.%202)/" class="archive-article-date">
-  	<time datetime="2020-05-16T09:08:14.325Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-Orac-and-LCM"><a href="#C-Orac-and-LCM" class="headerlink" title="C. Orac and LCM"></a>C. Orac and LCM</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> For the multiset of positive integers       $s={s_1,s_2,\dots,s_k}$, define the Greatest Common Divisor       (GCD) and Least Common Multiple (LCM) of $s$ as follow:<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/16/Codeforces%20Round%20641%20(Div.%202)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 642 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/16/Codeforces%20Round%20642%20(Div.%203)/">Codeforces Round 642 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/16/Codeforces%20Round%20642%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-16T02:51:52.516Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="E-K-periodic-Garland"><a href="#E-K-periodic-Garland" class="headerlink" title="E. K-periodic Garland"></a>E. K-periodic Garland</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> You are given a garland consisting of $n$ lamps. States of       the lamps are represented by the string $s$ of length $n$.       The $i$-th character of the string $s_i$ equals ‘0’ if the $i$-th lamp is       turned off or ‘1’ if the       $i$-th lamp is turned on. You are also given a positive       integer $k$.<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">思维</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/16/Codeforces%20Round%20642%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 592 (Div. 2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/">Codeforces Round 592 (Div. 2)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/" class="archive-article-date">
-  	<time datetime="2020-05-14T04:35:28.301Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-The-Football-Season"><a href="#C-The-Football-Season" class="headerlink" title="C. The Football Season"></a>C. The Football Season</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> The football season has just ended in Berland. According to the       rules of Berland football, each match is played between two teams.       The result of each match is either a draw, or a victory of one of       the playing teams. If a team wins the match, it gets $w$       points, and the opposing team gets $0$ points. If the game       results in a draw, both teams get $d$ points.<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/14/Codeforces%20Round%20592%20(Div.%202)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:37:02.859Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hexo-github搭建博客"><a href="#hexo-github搭建博客" class="headerlink" title="hexo + github搭建博客"></a>hexo + github搭建博客</h1><p>具体参考博客<a href="https://wxt406611016.github.io/2019/02/08/github+hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" target="_blank" rel="noopener" title="标题">博客</a><br>需要注意的是，node不能安装14.10版本的,安装12.16版本,参考链接<a href="https://blog.csdn.net/weixin_34072159/article/details/92031176" target="_blank" rel="noopener">csdn</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 615 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20615%20(Div.%203)/">Codeforces Round 615 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/Codeforces%20Round%20615%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="D-MEX-maximizing"><a href="#D-MEX-maximizing" class="headerlink" title="D. MEX maximizing"></a>D. MEX maximizing</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Recall that MEX of an array is a minimum non-negative integer that does not belong to the array. Examples:<br>  for the array $[0, 0, 1, 0, 2]$ MEX equals to $3$ because numbers $0, 1$ and $2$ are presented in the array and $3$ is the minimum non-negative integer not presented in the array;  for the array $[1, 2, 3, 4]$ MEX equals to $0$ because $0$ is the minimum non-negative integer not presented in the array;  for the array $[0, 1, 4, 3]$ MEX equals to $2$ because $2$ is the minimum non-negative integer not presented in the array. You are given an empty array $a=[]$ (in other words, a zero-length array). You are also given a positive integer $x$.<br>You are also given $q$ queries. The $j$-th query consists of one integer $y_j$ and means that you have to append one element $y_j$ to the array. The array length increases by $1$ after a query.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20615%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 617 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20617%20(Div.%203)/">Codeforces Round 617 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/Codeforces%20Round%20617%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="C-Yet-Another-Walking-Robot"><a href="#C-Yet-Another-Walking-Robot" class="headerlink" title="C. Yet Another Walking Robot"></a>C. Yet Another Walking Robot</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>There is a robot on a coordinate plane. Initially, the robot is located at the point $(0, 0)$. Its path is described as a string $s$ of length $n$ consisting of characters ‘L’, ‘R’, ‘U’, ‘D’.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20617%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 624 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20624%20(Div.%203)/">Codeforces Round 624 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/Codeforces%20Round%20624%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C-Perform-the-Combo"><a href="#C-Perform-the-Combo" class="headerlink" title="C. Perform the Combo"></a>C. Perform the Combo</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>You want to perform the combo on your opponent in one popular fighting game. The combo is the string $s$ consisting of $n$ lowercase Latin letters. To perform the combo, you have to press all buttons in the order they appear in $s$. I.e. if $s=$”abca” then you have to press ‘a’, then ‘b’, ‘c’ and ‘a’ again.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20624%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces Round 627 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">Codeforces Round 627 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="E-Sleeping-Schedule"><a href="#E-Sleeping-Schedule" class="headerlink" title="E. Sleeping Schedule"></a>E. Sleeping Schedule</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is $0$). Each time Vova sleeps exactly one day (in other words, $h$ hours).</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+  <div id="SOHUCS" sid="优先队列" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+
   
 
 
@@ -891,8 +343,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
