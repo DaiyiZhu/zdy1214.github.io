@@ -164,14 +164,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="C-Division-and-Union"><a href="#C-Division-and-Union" class="headerlink" title="C. Division and Union"></a>C. Division and Union</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> There are $n$ segments $[l_i, r_i]$ for $1 \le i \le       n$. You should divide all segments into two non-empty groups in such way that       there is no pair of segments from different groups which have at       least one common point, or say that it’s impossible to do it. Each       segment should belong to exactly one group.<br>     To optimize testing process you will be given multitest.</p>
-<h2 id="Input"><a href="#Input" class="headerlink" title="Input:"></a>Input:</h2><p>​    The first line contains one integer $T$ ($1 \le T \le       50000$) — the number of queries. Each query contains description       of the set of segments. Queries are independent.<br>​     First line of each query contains single integer $n$ ($2       \le n \le 10^5$) — number of segments. It is guaranteed that       $\sum{n}$ over all queries does not exceed $10^5$.<br>​     The next $n$ lines contains two integers $l_i$, $r_i$       per line ($1 \le l_i \le r_i \le 2 \cdot 10^5$) — the       $i$-th segment.</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>For each query print $n$ integers $t_1, t_2, \dots, t_n$       ($t_i \in {1, 2}$) — for each segment (in the same order as       in the input) $t_i$ equals $1$ if the $i$-th segment       will belongs to the first group and $2$ otherwise.<br>     If there are multiple answers, you can print any of them. If       there is no answer, print $-1$.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h2><p>3<br>2<br>5 5<br>2 3<br>3<br>3 5<br>2 3<br>2 3<br>3<br>3 3<br>4 4<br>5 5</p>
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h2><p>2 1<br>-1<br>1 1 2 </p>
-<h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a><a href="http://codeforces.com/contest/1101/problem/C" target="_blank" rel="noopener">题目链接</a></h3><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>按照题目要求，我们需要把所有的区间分成两组，且两组之间不能有区间包括相同的点，这个题我想了好久也没有想到切入点，其实很简单，我们只需要找到一个数，然后一组中所有的区间里面数都小于这个数，而另外一组所有区间里面的数都大于这个数，然后分成两组就行了，问题在于如何找到这个数，我们将所有区间按照左端点进行排序，这样所有区间的左端点就是从小到大排列，然后开始维护第一组中的最大值，进行遍历，当下面一个区间的左端点的值大于所维护的第一组的最大值时，说明这个区间肯定和第一组没有交集了，因为我们是按照左端点从小到大进行排序，所有后面的区间和第一组也灭有交集，所以就分成了两组，如果不存在一个区间的左端点的值大于所维护的第一组的最大值时，就输出-1。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DBG(x)                         \</span></span><br><span class="line">    (<span class="keyword">void</span>)(<span class="built_in">cout</span> &lt;&lt; <span class="string">"L"</span> &lt;&lt; __LINE__     \</span><br><span class="line">                &lt;&lt; <span class="string">": "</span> &lt;&lt; #x &lt;&lt; <span class="string">" = "</span> \</span><br><span class="line">                &lt;&lt; (x) &lt;&lt; <span class="string">'\n'</span>)</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">510000</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l;</span><br><span class="line">    <span class="keyword">int</span> r;</span><br><span class="line">    <span class="keyword">int</span> pos;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> node &amp;a, <span class="keyword">const</span> node &amp;b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.l == b.l)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> a.r &lt; b.r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a.l &lt; b.l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp1</span><span class="params">(<span class="keyword">const</span> node &amp;a, <span class="keyword">const</span> node &amp;b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.id &lt; b.id;</span><br><span class="line">&#125;</span><br><span class="line">node P[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setiosflags(ios::fixed) &lt;&lt; setprecision(<span class="number">12</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; P[i].l &gt;&gt; P[i].r;</span><br><span class="line">            P[i].id = i;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(P + <span class="number">1</span>, P + <span class="number">1</span> + n, cmp);</span><br><span class="line">        <span class="keyword">int</span> mx = P[<span class="number">1</span>].r;</span><br><span class="line">        P[<span class="number">1</span>].pos = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> cur1 = P[i].l;</span><br><span class="line">            <span class="keyword">int</span> cur2 = P[i].r;</span><br><span class="line">            <span class="keyword">if</span> (cur1 &lt;= mx)</span><br><span class="line">            &#123;</span><br><span class="line">                mx = <span class="built_in">max</span>(mx, cur2);</span><br><span class="line">                P[i].pos = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                pos = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!pos)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = pos; i &lt;= n; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                P[i].pos = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sort(P + <span class="number">1</span>, P + <span class="number">1</span> + n, cmp1);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; P[i].pos &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h1 id="C-Division-and-Union"><a href="#C-Division-and-Union" class="headerlink" title="C. Division and Union"></a>C. Division and Union</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p> There are $n$ segments $[l_i, r_i]$ for $1 \le i \le       n$. You should divide all segments into two non-empty groups in such way that       there is no pair of segments from different groups which have at       least one common point, or say that it’s impossible to do it. Each       segment should belong to exactly one group.<br> To optimize testing process you will be given multitest.</p>
+        
       
 
       
@@ -179,6 +173,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -645,80 +654,6 @@
 
 
   
-    <article id="post-Codeforces Round 627 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">Codeforces Round 627 (Div. 3)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/" class="archive-article-date">
-  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="E-Sleeping-Schedule"><a href="#E-Sleeping-Schedule" class="headerlink" title="E. Sleeping Schedule"></a>E. Sleeping Schedule</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is $0$). Each time Vova sleeps exactly one day (in other words, $h$ hours).</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Codeforces Round 624 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -764,6 +699,80 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20624%20(Div.%203)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Codeforces Round 627 (Div. 3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">Codeforces Round 627 (Div. 3)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/" class="archive-article-date">
+  	<time datetime="2020-05-07T02:13:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="E-Sleeping-Schedule"><a href="#E-Sleeping-Schedule" class="headerlink" title="E. Sleeping Schedule"></a>E. Sleeping Schedule</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Vova had a pretty weird sleeping schedule. There are $h$ hours in a day. Vova will sleep exactly $n$ times. The $i$-th time he will sleep exactly after $a_i$ hours from the time he woke up. You can assume that Vova woke up exactly at the beginning of this story (the initial time is $0$). Each time Vova sleeps exactly one day (in other words, $h$ hours).</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/07/Codeforces%20Round%20627%20(Div.%203)/">展开全文 >></a>
         </p>
       
 
@@ -1006,6 +1015,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思维</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">贪心</a>
               </li>
              
               <li class="article-tag-list-item">
